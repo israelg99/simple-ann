@@ -21,3 +21,9 @@ if __name__ == '__main__':
     net = NeuralNetwork([2,2,1])
     net.printData()
     print(net.feedforward([1,0]))
+    
+    net.backPropagation(trainingSet)
+    print(str(net.feedforward([1,0])) + " " + str(net.feedforward([1,0])[0] > 0.9))
+    print(str(net.feedforward([0,1])) + " " + str(net.feedforward([0,1])[0] > 0.9))
+    print(str(net.feedforward([1,1])) + " " + str(net.feedforward([1,1])[0] > 0.9))
+    print(str(net.feedforward([0,0])) + " " + str(net.feedforward([0,0])[0] > 0.9))

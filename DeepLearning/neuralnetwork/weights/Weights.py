@@ -29,7 +29,10 @@ class Weights(PrintableData, object):
         # 'refNeuronLayer' is expected to have the same length as the weights numpy array.
         for i, weight in enumerate(self.weights):
             weight.updateWeightNeuron(refNeuronLayer.neurons[i])
-            
+        
+    def updateWeight(self, index, inputNeuronValue, delta, learning_rate):
+        self.weights[index].updateWeight(inputNeuronValue, delta, learning_rate)
+        
     def printData(self, precision=4):
         
         super(Weights, self).printData()

@@ -28,6 +28,9 @@ class Weight(PrintableData, object):
         """I'm the 'weight' property."""
         return self._refNeuron
     
+    def updateWeight(self, inputNeuronValue, delta, learning_rate):
+        self._weight += learning_rate * 1 * inputNeuronValue * delta
+    
     def updateWeightNeuron(self, refNeuron):
         self._refNeuron = refNeuron
     
