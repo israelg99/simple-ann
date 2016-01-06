@@ -4,9 +4,9 @@ Created on Dec 20, 2015
 @author: Israel
 '''
 
-from DeepLearning.functions.Functions import Functions
 from DeepLearning.neuralnetwork.weights.Weights import Weights
 from DeepLearning.util.PrintableData import PrintableData
+import numpy as np
 
 
 class Neuron(PrintableData, object):
@@ -14,7 +14,7 @@ class Neuron(PrintableData, object):
     """ The neuron constructor, uses a randomly normally distributed float for the default bias """
     def __init__(self, bias = None, refNeuronLayer=None):
         if bias is None:
-            bias = Functions.random(-1,1)
+            bias = np.random.rand()
             
         self._bias = bias;
 

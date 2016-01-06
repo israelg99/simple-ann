@@ -4,8 +4,8 @@ Created on Dec 20, 2015
 @author: Israel
 '''
 
-from DeepLearning.functions.Functions import Functions
 from DeepLearning.util.PrintableData import PrintableData
+import numpy as np
 
 
 class Weight(PrintableData, object):
@@ -13,7 +13,7 @@ class Weight(PrintableData, object):
     """ The weight constructor, uses a randomly normally distributed float for the default weight """
     def __init__(self, weight = None, refNeuron=None):
         if weight is None:
-            weight = Functions.random(-1,1)
+            weight = np.random.rand()
             
         self._weight = weight
         self.updateWeightNeuron(refNeuron)
