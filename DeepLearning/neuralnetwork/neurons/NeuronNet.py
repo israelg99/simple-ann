@@ -63,7 +63,7 @@ class NeuronNet(PrintableData, object):
             return
         
         # Iterating through the layers and back-propagating them.
-        # `([1:-1])[::-1]` means we exclude the last neuron layer and reversing the list.
+        # `([1:-1])[::-1]` means we exclude the last and first neuron layer and reversing the list.
         for index, neuronLayer in enumerate((self.neuronLayers[1:-1])[::-1]):
             # We back-propagate each neuron layer, and passing the next layer as a parameter.
             # `len(self.neuronLayers)-index` we do such an operation because the list is reversed!
