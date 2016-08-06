@@ -35,3 +35,7 @@ class TrainingSet(object):
     
     def addElements(self, *elements):
         self.elements.extend(list(elements))
+
+    def printEvaluation(self, neuralnetwork):
+        for element in self.elements:
+            element.printEvaluation(neuralnetwork)

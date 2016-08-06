@@ -20,3 +20,10 @@ class TrainingElement(object):
     def outputs(self):
         """I'm the 'outputs' property."""
         return self._outputs
+
+    def printEvaluation(self, neuralnetwork):
+        # We only check evaluation of the first output neuron in the neuralnetwork, implement all output neurons evaluation check.
+        print("Input {inputs} is {evaluation}, was expected to be {outputs}".format(inputs=self.inputs, evaluation=neuralnetwork.feedforward(self.inputs), outputs=self.outputs))
+
+    def __str__(self):
+        return "inputs: {inputs} outputs: {outputs}".format(inputs=self.inputs, outputs=self.outputs);
